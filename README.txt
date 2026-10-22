@@ -22,8 +22,9 @@ but direct file opening has not been verified in our browser environment.
 CONTROLS
 Choose a neighbouring stop on the map or use the named route buttons.
 Keyboard: Tab through choices; Enter activates the focused choice.
-On a narrow screen, swipe the map horizontally to see every stop. The
-route buttons sit below the map. Whole-route planning is easier on desktop.
+On screens up to 480px wide, a compact portrait map shows all seven stops
+without horizontal panning. Route buttons sit below the map. A retry
+returns to the start; a win or loss brings its ending into view.
 Sound is optional and starts muted; thinking never runs down the clock.
 
 SOURCE AND CHECKS
@@ -33,12 +34,15 @@ SOURCE AND CHECKS
   LICENSE          MIT licence for original code, text and vector artwork.
 Run checks: node --test game.test.cjs
 
-Author checks: five Node tests passed, including 1037 reachable states;
-Chrome desktop win/loss/retry and keyboard win; emulated390px layout.
-Independent agent review completed a first round from UI instructions,
-then checked failure/retry and a390px viewport. This is not human player
-research, proof of buyer demand, accessible conformance, real mobile
-hardware/Safari coverage or verified audible output.
+Author rules checks: five Node tests passed, including 1037 reachable states;
+the engine is unchanged in the compact-map revision. Independent agent review
+completed a 390px winning round and a 320px losing round, observed both
+endings and retries, used Enter on a road button, and checked that a
+390px-to-desktop-to-390px resize preserved the ongoing route. All seven
+stops and eleven road prices were readable together at those narrow widths.
+These are desktop-browser viewport checks, not human player research or
+proof of buyer demand. Physical mobile hardware/touch, Safari, audible
+output and screenreader conformance remain unverified.
 
 Created for this project with AI assistance. No third-party raster assets,
 client brief, customer artwork or previous professional game-client work
