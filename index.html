@@ -63,7 +63,8 @@
 (() => {
   'use strict';
   const game = window.Courier, $ = id => document.getElementById(id), svgNS = 'http://www.w3.org/2000/svg';
-  let state = game.create(), sound = false, audio;
+  const autoStart = new URLSearchParams(window.location.search).get('autostart') === '1';
+  let state = autoStart ? game.start() : game.create(), sound = false, audio;
   const compactMap = window.matchMedia('(max-width:480px)');
   const compactStops = {
     depot:{x:220,y:55}, market:{x:80,y:180}, garden:{x:355,y:180},
@@ -127,7 +128,7 @@
     $('ending').hidden=!ended;if(ended){$('end-title').textContent=state.phase==='won'?'Just in time.':'No road left in time.';$('end-summary').textContent=state.phase==='won'?'All three parcels delivered. You are on the last ferry home.':'Your route is still on the map. A little planning at the next start can make the difference.';$('end-stat').textContent=state.phase==='won'?`${14-state.minutes} minutes travelled · ${state.minutes} left · 3 parcels delivered`:`${state.delivered.length} of 3 parcels delivered · ${state.minutes} ${state.minutes===1?'minute':'minutes'} left`;}
   }
   $('start').addEventListener('click',()=>{state=game.start();render();$('routes').querySelector('button')?.focus({preventScroll:true});});
-  function reset(){state=game.create();render();document.querySelector('.masthead').scrollIntoView({block:'start',behavior:'auto'});$('start').focus({preventScroll:true});}
+  function reset(){state=autoStart?game.start():game.create();render();document.querySelector('.masthead').scrollIntoView({block:'start',behavior:'auto'});if(autoStart)$('routes').querySelector('button')?.focus({preventScroll:true});else $('start').focus({preventScroll:true});}
   $('restart').addEventListener('click',reset);$('again').addEventListener('click',reset);
   $('sound').addEventListener('click',()=>{sound=!sound;$('sound').textContent=sound?'Sound: on':'Sound: off';$('sound').setAttribute('aria-pressed',String(sound));if(sound)soundCue();});render();
 })();
