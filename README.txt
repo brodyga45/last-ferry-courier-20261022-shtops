@@ -1,6 +1,7 @@
 LAST FERRY COURIER — THREE EVENINGS
 A turn-based route-planning story by brodyga45.
-Author-ready candidate for independent review; this folder is not proof of a public release.
+A complete short journey, independently reviewed as a coherent three-puzzle experience.
+Release links are below; this source folder alone is not proof of a deployment.
 
 A small harbour changes over three evenings. First learn its road costs and
 keep three delivery promises. Next, plan around an early closing gate.
@@ -60,3 +61,15 @@ human engagement, willingness to pay or paid customer delivery.
 
 Original code, story and vector artwork were developed with AI assistance.
 No client assets or claimed professional game-client history are included.
+
+PLAY ONLINE
+https://brodyga45.com/games/last-ferry-courier/
+https://brodyga45.github.io/last-ferry-courier-20261022-shtops/
+
+ADAPTATION
+A one-map event adaptation starts at EUR250, with scope and final price agreed
+before work. Source/static ZIP and one revision are included; new mechanics,
+backend services and ongoing hosting are separate.
+https://contra.com/s/gUbsWcqe-a-short-browser-story-game-adapted-to-your-event
+
+No paid customer or measured player engagement is claimed by the public demo.
