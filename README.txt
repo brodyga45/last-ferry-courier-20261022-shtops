@@ -1,49 +1,62 @@
-LAST FERRY COURIER
-A short, original browser puzzle by brodyga45.
+LAST FERRY COURIER — THREE EVENINGS
+A turn-based route-planning story by brodyga45.
+Author-ready candidate for independent review; this folder is not proof of a public release.
 
-Deliver bread to the market, a letter to the garden and a lamp to the
-lighthouse, then catch the ferry. You have 14 travel minutes. Thinking is
-free; every road costs the time shown on the map. Try a route, discover
-its consequences, and start another round if the ferry gets away.
-
-This is one complete small experience, not an endlessly replayable game.
-There are six winning routes, all costing 13 minutes. The map and story
-stay the same on a new round.
+A small harbour changes over three evenings. First learn its road costs and
+keep three delivery promises. Next, plan around an early closing gate.
+Finally, a storm closes a road and a delivered lamp opens a new way home.
+Each evening finishes at the ferry; the third has a closing story.
+This is a finite journey, not an endless or randomly generated game.
 
 PLAY
-Play online: https://brodyga45.github.io/last-ferry-courier-20261022-shtops/
-
 Serve this folder locally: python3 -m http.server 18871 --bind 127.0.0.1
-Then open http://127.0.0.1:18871/ in your browser.
-No build step, account, analytics, remote API or external assets are used.
-Directly opening index.html with engine.js beside it should also work,
-but direct file opening has not been verified in our browser environment.
+Open http://127.0.0.1:18871/?autostart=1 for an immediately active board.
+Without that parameter the standalone introduction is retained.
+No build, account, remote API, analytics, network asset or paid dependency.
 
-CONTROLS
-Choose a neighbouring stop on the map or use the named route buttons.
-Keyboard: Tab through choices; Enter activates the focused choice.
-On screens up to 480px wide, a compact portrait map shows all seven stops
-without horizontal panning. Route buttons sit below the map. A retry
-returns to the start; a win or loss brings its ending into view.
-Sound is optional and starts muted; thinking never runs down the clock.
+HOW IT WORKS
+Roads spend travel minutes. Thinking never spends time.
+Visit tonight's three delivery destinations, then finish at Ferry.
+The second evening's Garden delivery is due by travel minute 4.
+The last evening has a 12-minute budget, a storm-closed Market-Lighthouse
+road, and a Garden-Ferry footbridge opened by the Lighthouse delivery.
+All changed conditions are described before movement.
 
-SOURCE AND CHECKS
-  index.html       Interface, vector map, story and optional generated tones.
-  engine.js        Dependency-free rules, also imported by the Node tests.
-  game.test.cjs    Complete-round and exhaustive reachable-path checks.
-  LICENSE          MIT licence for original code, text and vector artwork.
-Run checks: node --test game.test.cjs
+Undo road restores the previous position, time and deliveries, including
+a failed route. Restart evening resets only the current evening. Completing
+an evening unlocks the next; completed evenings can be replayed from the tabs.
+The local browser saves completed evenings and the selected evening when
+storage is available. An unfinished route restarts on reload. If storage
+fails, the game still works in the current tab. There is no server account.
 
-Author rules checks: five Node tests passed, including 1037 reachable states;
-the engine is unchanged in the compact-map revision. Independent agent review
-completed a 390px winning round and a 320px losing round, observed both
-endings and retries, used Enter on a road button, and checked that a
-390px-to-desktop-to-390px resize preserved the ongoing route. All seven
-stops and eleven road prices were readable together at those narrow widths.
-These are desktop-browser viewport checks, not human player research or
-proof of buyer demand. Physical mobile hardware/touch, Safari, audible
-output and screenreader conformance remain unverified.
+Use the map or named road buttons. Tab and Enter work; Space activates a
+focused map stop. Optional synthesized sound is off initially. Initial
+entry and restarting preserve explicit ?autostart=1 without a synthetic click.
+The narrow map avoids horizontal panning; ordinary vertical scrolling may
+be needed for notes and named route buttons.
 
-Created for this project with AI assistance. No third-party raster assets,
-client brief, customer artwork or previous professional game-client work
-is implied. This is a self-directed open-source sample, not a client delivery.
+SOURCE AND AUTHOR CHECKS
+  index.html          Interface, original vector map, progression and tones.
+  engine.js           Immutable evening rules and pure move/undo functions.
+  game.test.cjs       First-evening original complete-path regression checks.
+  campaign.test.cjs   Deadlines, bridge, undo and independent transition audit.
+  LICENSE             MIT license.
+Run: node --test game.test.cjs campaign.test.cjs
+
+10 tests passed. The original evening retains its 1,037 explored path states
+and six winning walks. Independent literal-rule comparison covers 137, 101
+and 94 unique states in the three evenings, with 2,656 attempted moves.
+Unique terminal states are not counts of different winning walks.
+
+Author Chrome UI observations: complete progression through all three
+endings; missed deadline and Undo; lamp opens the bridge; final epilogue;
+completed evenings survive reload; explicit/default launch modes; 390px
+same-origin frame first move, Undo, keyboard Enter, deadline visibility and
+restart. Copy, labels and compact notes were refined during this pass.
+These are author checks, not independent interest or acceptance findings.
+The narrow frame is not a physical phone. Safari, physical touch, audible
+output and screenreader conformance remain unverified. There is no measured
+human engagement, willingness to pay or paid customer delivery.
+
+Original code, story and vector artwork were developed with AI assistance.
+No client assets or claimed professional game-client history are included.
