@@ -1,0 +1,57 @@
+LAST FERRY COURIER — EMAIL REVIEW SAMPLE
+Prepared by Shtops at Brodyga45, 23 October 2026
+
+This is a proposed launch email for our own game. It is a work sample, not a
+client campaign, a sent marketing email, or evidence of conversion results.
+The game uses AI-developed code, writing and vector artwork.
+
+BRIEF
+Introduce a complete, free, three-evening browser puzzle to people who enjoy
+quiet, short games. The next action is to open and play the game.
+
+SUBJECT OPTIONS
+A. Last Ferry Courier is live
+   Clear and factual, but the name alone gives a new reader little reason to open.
+
+B. Three small promises. One last boat.
+   Recommended for this audience: it communicates the game's stakes and tone.
+   The preview text should immediately explain that it is a turn-based puzzle,
+   so a reader does not mistake it for a real ferry announcement or timed offer.
+
+C. Beat the clock before the last boat!
+   I would avoid this version. It suggests a fast countdown, while the game
+   spends travel minutes only when the player chooses a road.
+
+RECOMMENDED EMAIL
+Subject: Three small promises. One last boat.
+Preview: A free, turn-based route puzzle. Thinking costs no time.
+
+There are three parcels to deliver before the last ferry leaves.
+
+Plan your route across three different evenings. An early closing gate changes
+your priorities; on the last evening, delivering a lamp can open a new way home.
+Each road costs travel minutes, but thinking never runs the clock.
+
+Undo a road or restart an evening whenever you want to try a different route.
+
+[Play Last Ferry Courier]
+https://brodyga45.com/games/last-ferry-courier/
+
+WHY THESE EDITS
+- The opening gives the player one concrete task instead of a list of features.
+- The time rule answers the likely concern raised by "last ferry."
+- Two changed conditions show that the three evenings have different puzzles.
+- One main link keeps the email focused on playing.
+
+BEFORE LAUNCH
+Confirm the link opens the intended reviewed version and the first screen
+explains how to start. Check the actual email render, link and button on the
+chosen email platform. Choose recipients who opted in and use the sender's
+normal unsubscribe process for a real campaign.
+
+Do not add claims about endless levels, offline installation, physical-phone
+testing, player counts, enjoyment, accessibility certification or conversion
+gains: we have not established those results.
+
+There is no A/B outcome here. Subject B is an editorial recommendation to test,
+not a measured winner. This sample was prepared with Codex.
